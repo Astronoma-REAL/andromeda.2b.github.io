@@ -90,7 +90,8 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 8px 20px 10px;
+    padding: 15px 20px 10px;
+    margin-top: 20px;
     opacity: 0.3;
     width: 100%;
 }
@@ -107,10 +108,16 @@ body {
 .channels .channel:focus {
     opacity: 1;
 }
-.channels .channel.active .button,
-.channels .channel:hover .button,
-.channels .channel:focus .button {
-    display: block;
+.channels .channel.active,
+.channels .channel:hover,
+.channel p {
+    transform: translateX(20px) scale(1.1) ;
+}
+
+.channels .channel.active,
+.channels .channel, 
+.channel p {
+    transition: 100ms ease;
 }
 .channels .channel .channel-name {
     font-size: 0.9rem;
@@ -152,6 +159,7 @@ body {
 .channels .channels-list {
     flex: 1 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 0 20px;
 }
 .channels .channels-list ul {
@@ -252,7 +260,7 @@ body {
 .hash-before::before,
 .channels .channel-text .channel-name::before,
 .menu .menu-name::before {
-    content: "#";
+    content: "";
     margin-right: 2px;
     font-weight: 300;
     color: #8A8E94;

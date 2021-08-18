@@ -729,3 +729,8 @@ figure.test:hover figcaption {
     user-select: none;
 }
 
+.down-center{
+    position: absolute;
+    bottom: 10px;
+    margin-left: 70px;
+}

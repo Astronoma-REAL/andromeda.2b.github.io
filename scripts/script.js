@@ -43,5 +43,8 @@ function swapContent(z) {
         contentArray[i].style.display = "none";
     }
     contentArray[index].style.display = "block";
-    document.getElementsByClassName("menu-name")[0].innerHTML = contentArray[index].innerHTML;
+}
+
+function changeActiveTextOnTop(changeTo){
+    document.getElementsByClassName("menu-name")[0].innerHTML = changeTo;
 }
